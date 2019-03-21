@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using Ceto.Common.Unity.Utility;
+using UnityEngine.XR;
 
 namespace Ceto
 {
@@ -400,6 +401,7 @@ namespace Ceto
 	            data.cam.allowHDR = cam.allowHDR;
 	            data.cam.targetTexture = null;
 				data.cam.useOcclusionCulling = false;
+                data.cam.cameraType = CameraType.Reflection;
 
                 //Copy the cull distances used by the camera.
                 //Since the reflection camera uses a oblique projection matrix
@@ -414,7 +416,7 @@ namespace Ceto
                 }
             }
 
-			data.cam.fieldOfView = cam.fieldOfView;
+            data.cam.fieldOfView = cam.fieldOfView;
 			data.cam.nearClipPlane = cam.nearClipPlane;
 			data.cam.farClipPlane = cam.farClipPlane;
 			data.cam.orthographic = cam.orthographic;

@@ -939,7 +939,7 @@ namespace Ceto
 				data.cam.useOcclusionCulling = false;
                 data.cam.RemoveAllCommandBuffers();
                 data.cam.targetTexture = null;
-
+                data.cam.cameraType = CameraType.Reflection;
             }
 
             //Note - position rotation and projection set before rendering.
